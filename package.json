@@ -1,0 +1,13 @@
+{
+  "name": "elm-example",
+  "version": "1.0.0",
+  "description": "An example of an elm project.",
+  "main": "index.js",
+  "repository": "https://github.com/herbertfj/elm-example.git",
+  "author": "Herbert Freyre",
+  "license": "MIT",
+  "devDependencies": {
+    "elm": "^0.18.0"
+  },
+  "dependencies": {}
+}
