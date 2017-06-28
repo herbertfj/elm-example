@@ -39,3 +39,7 @@ To start the dev server:
 ```
 yarn start
 ```
+
+## Examples
+
+Look under `/examples` for implementations in different frameworks (React for now!).
