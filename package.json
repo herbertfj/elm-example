@@ -6,8 +6,13 @@
   "repository": "https://github.com/herbertfj/elm-example.git",
   "author": "Herbert Freyre",
   "license": "MIT",
+  "scripts": {
+    "pretest": "elm-test --add-dependencies elm/tests/elm-package.json",
+    "test": "elm-test elm/tests/**/*.elm"
+  },
   "devDependencies": {
-    "elm": "^0.18.0"
+    "elm": "^0.18.0",
+    "elm-test": "^0.18.6"
   },
   "dependencies": {}
 }

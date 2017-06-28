@@ -3,7 +3,9 @@ module Main exposing (..)
 import Html exposing (Html, text)
 
 
-type alias Model = {}
+type alias Model =
+    { message : Result String String
+    }
 
 
 type Msg
@@ -12,7 +14,9 @@ type Msg
 
 
 initialModel : Model
-initialModel = {}
+initialModel =
+    { message = Ok "Your app is working!"
+    }
 
 
 main : Program Never Model Msg
@@ -27,11 +31,19 @@ main =
 
 view : Model -> Html Msg
 view model =
-    text "Your app is working!"
+    case model.message of
+        Ok value ->
+            text value
+
+        Err error ->
+            text error
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        _ ->
-            ( model, Cmd.none )
+        Success ->
+            ( { model | message = Ok "Your app is working!" }, Cmd.none )
+
+        Error ->
+            ( { model | message = Err "Your app is broken!" }, Cmd.none )
