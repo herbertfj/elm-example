@@ -33,3 +33,9 @@ To run the tests:
 ```
 yarn test
 ```
+
+To start the dev server:
+
+```
+yarn start
+```

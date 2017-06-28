@@ -34,5 +34,11 @@ module.exports = {
     ],
 
     noParse: /\.elm$/
+  },
+
+  devServer: {
+    stats: {
+      colors: true
+    }
   }
 }
