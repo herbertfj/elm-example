@@ -7,10 +7,11 @@
   "author": "Herbert Freyre",
   "license": "MIT",
   "scripts": {
+    "install": "elm package install --yes",
     "build": "webpack",
     "start": "webpack-dev-server",
-    "pretest": "elm-test --add-dependencies elm/tests/elm-package.json",
-    "test": "elm-test elm/tests/**/*.elm"
+    "pretest": "elm test --add-dependencies elm/tests/elm-package.json",
+    "test": "elm test elm/tests/**/*.elm"
   },
   "devDependencies": {
     "elm": "^0.18.0",
